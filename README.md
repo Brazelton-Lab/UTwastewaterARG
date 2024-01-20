@@ -37,6 +37,7 @@ VFDB http://www.mgc.ac.cn/VFs/download.htm
 
 ## Citations
 The overall assembly-based approach, sequence coverage calculations, and the seq-qc and seq-annot packages were described in:
+
 Thornton, CT, Tanner, W, VanDerslice, J, Brazelton, WJ (2020) Localized effect of treated wastewater effluent on the resistome of an urban watershed. GigaScience. 9 (11): giaa125, https://doi.org/10.1093/gigascience/giaa125
 
 In addition, each of the tools listed above should be cited if you use them in your own work.
