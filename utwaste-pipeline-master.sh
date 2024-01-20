@@ -204,7 +204,6 @@ mkdir "VFDB_results"
 mv *.VFDB.tsv VFDB_results/
 
 # get coverage of mobileOG results
-# annotate-mobileOG.sh
 for MGE in "mobileOG_results"/*.mobileOG.Alignment.Out.csv; do
 ASS=$(basename $MGE .mobileOG.Alignment.Out.csv)
 # convert to tab-delimited
@@ -216,7 +215,6 @@ srun cut -f1-19 $MGE.tsv2 > "$MGE".tsv2.cut
 annotate_features --type CDS --conflict quality --hits "$MGE".tsv2.cut --specifiers "id,saccver,qaccver,pident,bitscore,length,evalue,qlength,sstart,send,qstart,qend,mobileOG_ID,Gene_Name,Best_Hit_Accession_ID,Major_mobileOG_Category,Minor_mobileOG_Category,Source_Database,Evidence_Type" --out "$GFF_PATH"/"$ASS".mobileOG.gff "$GFF_PATH"/"$ASS".gff
 done
 
-# count-mobileOG.sh
 # specific for self-mappings only
 for assembly in "$GFF_PATH"/*.mobileOG.gff; do
 	ASS=$(basename $assembly .mobileOG.gff)
