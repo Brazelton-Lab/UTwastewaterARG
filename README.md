@@ -5,7 +5,7 @@ This repository contains a complete pipeline for identification of antibiotic re
 
 The batch script "utwaste-pipeline-master.sh" uses an assembly-based approach, beginning with quality control of the original sequencing reads and ending with the calculation of sequencing coverage of each predicted ARG and MGE in each metagenome. 
 
-Dependencies
+## Dependencies
 Various python tools written by the Brazelton lab, documented in the following repositories:
 https://github.com/Brazelton-Lab/seq-qc
 https://github.com/Brazelton-Lab/seq-annot
@@ -30,7 +30,7 @@ mobileOG https://github.com/clb21565/mobileOG-db/tree/main
 VFDB http://www.mgc.ac.cn/VFs/download.htm
 
 
-Citations
+##Citations
 The overall assembly-based approach, sequence coverage calculations, and the seq-qc and seq-annot packages were described in:
 Thornton, CT, Tanner, W, VanDerslice, J, Brazelton, WJ (2020) Localized effect of treated wastewater effluent on the resistome of an urban watershed. GigaScience. 9 (11): giaa125, https://doi.org/10.1093/gigascience/giaa125
 
