@@ -43,3 +43,6 @@ Thornton, CT, Tanner, W, VanDerslice, J, Brazelton, WJ (2020) Localized effect o
 Brazelton WJ, McGonigle JM, Motamedi S, Pendleton HL, Twing KI, Miller BC, Lowe WJ, Hoffman AM, Prator CA, Chadwick GL, Anderson RE, Thomas E, Butterfield DA, Aquino KA, Früh-Green GL, Schrenk MO, Lang SQ. 2022. Metabolic strategies shared by basement residents of the Lost City hydrothermal field. Applied and Environmental Microbiology: e00929-22. [DOI: 10.1128/aem.00929-22.](https://doi.org/10.1128/aem.00929-22)
 
 In addition, each of the tools listed above should be cited if you use them in your own work.
+
+## Acknowledgements
+Brazelton lab tools were created by [Christopher Thornton](https://github.com/cnthornton) and [Alex Hyer](https://github.com/TheOneHyer). Analyses of ARGs and MGEs were further developed by Robin McArdel.
