@@ -5,9 +5,9 @@
 #SBATCH --output pipeline.out
 #SBATCH --error pipeline.err
 
-# options above specified for submitted jobs to SLURM 
+# options above specified for submitting jobs to a SLURM job manager 
 
-# define paths:
+# user should define these paths:
 # 1. qc-trimmed and -filtered reads
 QCREADS_PATH="qc_reads"
 # 2. fam.tab, included in database downloaded with amrfinder -u
@@ -77,7 +77,8 @@ python "$SCRIPTS_PATH"/fam.tab.cleanup.py
 # generate the json file with Brazelton lab reldb https://github.com/Brazelton-Lab/seq-annot/blob/master/seq_annot/reldb.py
 reldb --in-csv --filter 'Dbxref:-' --fields node_id,parent_node_id,gene_symbol,hmm_id,type,subtype,class,subclass,family_name --prepend 'Dbxref:NCBIfam:' --extend "database:'$DB'" --out AMR-"$DB".json fam.tsv
 
-# Remove entries with “NA” for HMM id (column 17) from all .csv files:
+# Remove entries with “NA” for HMM id (column 17) from all .csv files
+# This removes "PARTIALP" hits from downstream analyses
 for ASS in "$AMR_PATH"/*.amrfinder.tsv; do
 awk -F '\t' '$17 != "NA"' $ASS > $ASS.noNA
 mv $ASS.noNA $ASS
@@ -115,7 +116,7 @@ do
 done
 
 # count_features with gene_symbol
-# stream-lined and specific for only self-mappings
+# specific for self-mappings
 for assembly in "$GFF_PATH"/*.amrfinder.gff; do
 	ASS=$(basename $assembly .amrfinder.gff)
 	samtools sort -n -o "$BAM_PATH"/"$ASS"_mapped_to_"$ASS".derep.sorted-n.bam "$BAM_PATH"/"$ASS"_mapped_to_"$ASS".derep.bam
