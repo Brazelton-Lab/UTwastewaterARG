@@ -46,3 +46,5 @@ In addition, each of the tools listed above should be cited if you use them in y
 
 ## Acknowledgements
 Brazelton lab tools were created by [Christopher Thornton](https://github.com/cnthornton) and [Alex Hyer](https://github.com/TheOneHyer). Analyses of ARGs and MGEs were further developed by Robin McArdel.
+
+This work was funded by the Centers for Disease Control through a SHEPheRD RFTOP award to Matthew Samore, Jennifer Weidhaas, and James VanDerslice (University of Utah). The point of contact for this repository is [William Brazelton](https://wbrazelton.github.io/).
