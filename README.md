@@ -24,6 +24,8 @@ Prodigal https://github.com/hyattpd/Prodigal
 
 AMRFinderPlus https://github.com/ncbi/amr
 
+CoverM https://github.com/wwood/CoverM
+
 Bowtie2 https://github.com/BenLangmead/bowtie2
 
 samtools https://github.com/samtools/samtools
